@@ -3,15 +3,19 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: cimg/python:3.11
+      - image: docker:24.0
 
     steps:
       - checkout
 
+      - setup_remote_docker
+
       - run:
-          name: Verify pipeline
+          name: Build Docker image
           command: |
-            echo "CircleCI is working!"
-            python --version
-            git --version
-            echo "Build successful"
+            docker build -t circleci-custom-image:latest .
+
+      - run:
+          name: Run Docker container
+          command: |
+            docker run circleci-custom-image:latest echo "Docker build successful!"
