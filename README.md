@@ -1,66 +1,43 @@
-\# CircleCI Docker Project
+# CircleCI Docker CI/CD Project
 
+##  Overview
+This project demonstrates a complete CI/CD pipeline using Docker and CircleCI.  
+It automates build execution using GitHub triggers and cloud-based CI workflows.
 
+---
 
-\## Overview
+##  Tech Stack
+- Docker 
+- CircleCI 
+- Git & GitHub 
+- Python 3.11
 
-This project demonstrates a custom Docker image integrated with a CircleCI CI/CD pipeline. It showcases how to build containerized environments and automate workflows using DevOps tools.
+---
 
+##  CI/CD Workflow
+1. Code is pushed to GitHub
+2. CircleCI detects changes
+3. Pipeline is triggered automatically
+4. Build job runs in Docker environment
+5. Output is validated in CI logs
 
+---
 
-\## Tech Stack
+##  Pipeline Features
+- Automated build execution
+- Cloud-based CI environment
+- GitHub integration
+- Docker-ready architecture
 
-\- Docker
+---
 
-\- CircleCI
+##  Pipeline Status
+[![CircleCI](https://circleci.com/gh/tpchiripa/circleci-docker-project.svg?style=svg)](https://circleci.com/gh/tpchiripa/circleci-docker-project)
 
-\- Git \& GitHub
+---
 
-\- Python 3.11
-
-\- Bash (Linux environment)
-
-
-
-\## Features
-
-\- Custom Docker image with required CI tools
-
-\- CircleCI pipeline configuration
-
-\- Automated build environment setup
-
-\- GitHub integration for version control
-
-
-
-\## How to Run Locally
-
-
-
-```bash
-
-docker build -t circle-custom-image:0.1 .
-
-docker run -it circle-custom-image:0.1
-
-
-
-
-
-CI/CD
-
-
-
-This project is designed to run on CircleCI using .circleci/config.yml.
-
-
-
-Author
-
-
-
-Tichaona Chiripa
+##  Author
+Tichaona Peter Chiripa
 
 
 
